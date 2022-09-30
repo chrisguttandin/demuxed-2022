@@ -1,0 +1,10 @@
+{
+    "directives": {
+        "connect-src": ["wss://matchmaker.suenc.io", "'self'"],
+        "default-src": "'none'",
+        "font-src": "https://fonts.gstatic.com",
+        "img-src": "'self'",
+        "script-src": "'self'",
+        "style-src": ["https://fonts.googleapis.com", "'self'", "'unsafe-inline'"]
+    }
+}

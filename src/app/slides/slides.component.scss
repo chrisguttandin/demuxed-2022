@@ -1,0 +1,13 @@
+main {
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0;
+    padding: 3.9vw;
+    width: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    main {
+        padding: 6.94vh;
+    }
+}

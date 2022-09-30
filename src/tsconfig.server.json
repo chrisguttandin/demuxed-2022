@@ -1,0 +1,17 @@
+{
+    "angularCompilerOptions": {
+        "entryModule": "app/app.server.module#AppServerModule"
+    },
+    "compilerOptions": {
+        "baseUrl": "./",
+        "declaration": false,
+        "declarationMap": false,
+        "lib": ["dom", "es2020"],
+        "module": "es2020",
+        "outDir": "../out-tsc/app-server",
+        "target": "es2016"
+    },
+    "extends": "tsconfig-holy-grail/src/tsconfig-browser",
+    "files": ["main.server.ts"],
+    "include": ["**/*.d.ts"]
+}

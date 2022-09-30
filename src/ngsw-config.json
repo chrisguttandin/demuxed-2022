@@ -1,0 +1,29 @@
+{
+    "$schema": "../node_modules/@angular/service-worker/config/schema.json",
+    "assetGroups": [
+        {
+            "installMode": "prefetch",
+            "name": "app",
+            "resources": {
+                "files": ["/index.html", "/*.css", "/*.js"]
+            }
+        },
+        {
+            "installMode": "lazy",
+            "name": "assets",
+            "resources": {
+                "files": ["/assets/**"]
+            },
+            "updateMode": "prefetch"
+        },
+        {
+            "installMode": "lazy",
+            "name": "fonts",
+            "resources": {
+                "urls": ["https://fonts.googleapis.com/css", "https://fonts.gstatic.com"]
+            },
+            "updateMode": "lazy"
+        }
+    ],
+    "index": "/index.html"
+}

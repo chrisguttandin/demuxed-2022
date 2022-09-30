@@ -1,0 +1,6 @@
+*.DS_Store
+node_modules/
+/.angular/cache/
+/build/
+/playwright-report/
+/playwright-results/

@@ -1,0 +1,87 @@
+{
+    "author": "Christoph Guttandin",
+    "bugs": {
+        "url": "https://github.com/chrisguttandin/demuxed-2022/issues"
+    },
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    },
+    "dependencies": {
+        "@angular/animations": "^14.2.4",
+        "@angular/common": "^14.2.4",
+        "@angular/compiler": "^14.2.4",
+        "@angular/core": "^14.2.4",
+        "@angular/forms": "^14.2.4",
+        "@angular/platform-browser": "^14.2.4",
+        "@angular/platform-browser-dynamic": "^14.2.4",
+        "@angular/router": "^14.2.4",
+        "@angular/service-worker": "^14.2.4",
+        "hammerjs": "^2.0.8",
+        "prismjs": "^1.29.0",
+        "rxjs": "~7.5.0",
+        "subscribable-things": "^2.1.9",
+        "timing-provider": "^6.2.8",
+        "tslib": "^2.4.1",
+        "zone.js": "~0.11.4"
+    },
+    "description": "My talk at Demuxed 2022.",
+    "devDependencies": {
+        "@angular-devkit/build-angular": "^14.2.4",
+        "@angular-eslint/builder": "^14.1.2",
+        "@angular/cli": "~14.2.4",
+        "@angular/compiler-cli": "^14.2.4",
+        "@angular/platform-server": "^14.2.4",
+        "@commitlint/cli": "^17.2.0",
+        "@commitlint/config-angular": "^17.2.0",
+        "@playwright/test": "^1.27.1",
+        "@types/jasmine": "~4.0.0",
+        "@types/prismjs": "^1.26.0",
+        "bundle-buddy": "^0.2.2",
+        "commitizen": "^4.2.5",
+        "content-security-policy-builder": "^2.1.1",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "^8.27.0",
+        "eslint-config-holy-grail": "^54.0.3",
+        "grunt": "^1.5.3",
+        "grunt-cli": "^1.4.3",
+        "grunt-contrib-clean": "^2.0.1",
+        "grunt-contrib-copy": "^1.0.0",
+        "grunt-contrib-htmlmin": "^3.1.0",
+        "grunt-replace": "^2.0.2",
+        "grunt-sh": "^0.2.0",
+        "htmlhint": "^1.1.4",
+        "husky": "^8.0.2",
+        "jasmine-core": "~4.3.0",
+        "karma": "~6.4.0",
+        "karma-chrome-launcher": "~3.1.0",
+        "karma-coverage": "~2.2.0",
+        "karma-jasmine": "~5.1.0",
+        "karma-jasmine-html-reporter": "~2.0.0",
+        "karma-sauce-launcher": "^4.3.6",
+        "load-grunt-config": "^4.0.1",
+        "postcss": "^8.4.18",
+        "postcss-scss": "^4.0.5",
+        "prettier": "^2.7.1",
+        "pretty-quick": "^3.1.3",
+        "stylelint": "^14.14.1",
+        "stylelint-config-holy-grail": "^8.0.3",
+        "tsconfig-holy-grail": "^11.1.36",
+        "typescript": "~4.7.2"
+    },
+    "homepage": "https://chrisguttandin.github.io/demuxed-2022",
+    "license": "MIT",
+    "main": "src/index.html",
+    "name": "demuxed-2022",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chrisguttandin/demuxed-2022.git"
+    },
+    "scripts": {
+        "prepare": "husky install",
+        "test": "grunt lint && grunt test"
+    },
+    "version": "0.0.0"
+}

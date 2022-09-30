@@ -1,0 +1,21 @@
+{
+    "angularCompilerOptions": {
+        "enableI18nLegacyMessageIdFormat": false,
+        "strictInjectionParameters": true,
+        "strictInputAccessModifiers": true,
+        "strictTemplates": true
+    },
+    "compilerOptions": {
+        "declaration": false,
+        "declarationMap": false,
+        "downlevelIteration": true,
+        "lib": ["dom", "es2020"],
+        "module": "es2020",
+        "outDir": "../../out-tsc/spec",
+        "target": "es2017",
+        "types": ["jasmine", "node", "../../src/ng-dev-mode"]
+    },
+    "extends": "tsconfig-holy-grail/src/tsconfig-browser",
+    "files": ["../../config/karma/test.ts", "../../src/polyfills.ts"],
+    "include": ["**/*.ts"]
+}

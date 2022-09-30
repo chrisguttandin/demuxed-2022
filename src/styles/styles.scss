@@ -1,0 +1,62 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #78a0d9;
+    color: #fff;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-size: 8vw;
+    height: 56.25vw;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body h1:first-child,
+body h2 {
+    margin-top: 0;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    body {
+        font-size: 14.222vh;
+        height: 100%;
+        margin: 0 auto;
+        width: 177.777vh;
+    }
+}
+
+a {
+    color: inherit;
+}
+
+div,
+h3,
+li,
+p {
+    font-size: 50%;
+}
+
+h1 {
+    font-size: 120%;
+}
+
+h2 {
+    font-size: 75%;
+}
+
+ul {
+    margin: 0.5em 0;
+    padding: 0 0 0 0.5em;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+.center {
+    text-align: center;
+}

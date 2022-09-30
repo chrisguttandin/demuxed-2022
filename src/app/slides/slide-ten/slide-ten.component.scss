@@ -1,0 +1,126 @@
+.stage {
+    margin: 8.128125vw 0 0;
+    padding-bottom: 40%;
+    position: relative;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .stage {
+        margin: 14.45vh 0 0;
+    }
+}
+
+.stage-prop {
+    position: absolute;
+}
+
+@keyframes speak {
+    from {
+        transform: scale(1.3, 0.1) translateY(5px);
+    }
+
+    50% {
+        transform: scale(1) translateY(0px);
+    }
+
+    to {
+        transform: scale(1.3, 0.1) translateY(5px);
+    }
+}
+
+.mouth {
+    animation-name: speak;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transform-origin: 50px 70px;
+}
+
+.captions {
+    background-color: #fff;
+    border: 0.9vw solid #000;
+    display: flex;
+    padding: 2% 2% 3%;
+    font-size: 160%;
+    margin: 15%;
+    width: 70%;
+    text-align: center;
+
+    a {
+        color: #f92672;
+        display: inline-block;
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        width: 100%;
+        text-decoration: underline dashed;
+        text-underline-offset: 0.25em;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .captions {
+        border: 1.6vh solid #000;
+    }
+}
+
+.label {
+    font-size: 40px;
+}
+
+.word {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+}
+
+@keyframes first-word {
+    33% {
+        visibility: visible;
+    }
+
+    66% {
+        visibility: hidden;
+    }
+
+    to {
+        visibility: hidden;
+    }
+}
+
+.first-word {
+    animation-name: first-word;
+}
+
+@keyframes second-word {
+    33% {
+        visibility: hidden;
+    }
+
+    66% {
+        visibility: visible;
+    }
+
+    to {
+        visibility: hidden;
+    }
+}
+
+.second-word {
+    animation-name: second-word;
+}
+
+@keyframes third-word {
+    33% {
+        visibility: hidden;
+    }
+
+    66% {
+        visibility: hidden;
+    }
+
+    to {
+        visibility: visible;
+    }
+}
+
+.third-word {
+    animation-name: third-word;
+}

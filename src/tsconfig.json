@@ -1,0 +1,21 @@
+{
+    "angularCompilerOptions": {
+        "enableI18nLegacyMessageIdFormat": false,
+        "strictInjectionParameters": true,
+        "strictInputAccessModifiers": true,
+        "strictTemplates": true
+    },
+    "compilerOptions": {
+        "baseUrl": "./",
+        "declaration": false,
+        "declarationMap": false,
+        "downlevelIteration": true,
+        "lib": ["dom", "es2020"],
+        "module": "es2020",
+        "outDir": "../out-tsc/app",
+        "target": "es2017"
+    },
+    "extends": "tsconfig-holy-grail/src/tsconfig-browser",
+    "files": ["main.ts", "polyfills.ts"],
+    "include": ["**/*.d.ts"]
+}

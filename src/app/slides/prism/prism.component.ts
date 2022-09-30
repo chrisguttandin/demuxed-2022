@@ -1,0 +1,48 @@
+import {
+    AfterViewInit,
+    ChangeDetectionStrategy,
+    Component,
+    ElementRef,
+    Input,
+    OnChanges,
+    Renderer2,
+    SimpleChanges,
+    ViewChild
+} from '@angular/core';
+import * as Prism from 'prismjs';
+import 'prismjs/components/prism-typescript'; // eslint-disable-line import/no-internal-modules
+
+@Component({
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'dmx-prism',
+    styleUrls: ['./prism.component.scss'],
+    templateUrl: './prism.component.html'
+})
+export class PrismComponent implements AfterViewInit, OnChanges {
+    @Input() public language!: string;
+
+    @ViewChild('element', { static: true }) private _element!: ElementRef;
+
+    constructor(private _renderer2: Renderer2) {}
+
+    public ngAfterViewInit(): void {
+        Prism.highlightElement(this._element.nativeElement, false);
+    }
+
+    public ngOnChanges(changes: SimpleChanges): void {
+        // eslint-disable-next-line @typescript-eslint/dot-notation, dot-notation
+        const change = changes['language'];
+
+        if (change !== undefined) {
+            if (!change.firstChange) {
+                this._renderer2.removeClass(this._element.nativeElement, `language-${change.previousValue}`);
+            }
+
+            this._renderer2.addClass(this._element.nativeElement, `language-${change.currentValue}`);
+
+            if (!change.firstChange) {
+                Prism.highlightElement(this._element.nativeElement, false);
+            }
+        }
+    }
+}
