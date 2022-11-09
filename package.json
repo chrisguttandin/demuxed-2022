@@ -83,5 +83,5 @@
         "prepare": "husky install",
         "test": "grunt lint && grunt test"
     },
-    "version": "0.0.0"
+    "version": "1.0.0"
 }
