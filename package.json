@@ -22,7 +22,7 @@
         "prismjs": "^1.29.0",
         "rxjs": "~7.5.0",
         "subscribable-things": "^2.1.11",
-        "timing-provider": "^6.2.9",
+        "timing-provider": "^6.2.10",
         "tslib": "^2.4.1",
         "zone.js": "~0.11.4"
     },
