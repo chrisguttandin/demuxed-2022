@@ -1,4 +1,3 @@
 {
-    "customSyntax": "postcss-scss",
     "extends": "stylelint-config-holy-grail"
 }
