@@ -54,6 +54,7 @@
         "@hint/hint-no-bom": "^4.2.24",
         "@hint/hint-no-broken-links": "^4.2.24",
         "@hint/hint-no-disallowed-headers": "^3.1.19",
+        "@hint/hint-no-friendly-error-pages": "^3.3.24",
         "@playwright/test": "^1.32.3",
         "@types/jasmine": "~4.3.1",
         "@types/prismjs": "^1.26.0",
