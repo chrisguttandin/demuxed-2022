@@ -61,6 +61,7 @@
         "@hint/hint-no-protocol-relative-urls": "^3.1.4",
         "@hint/hint-no-vulnerable-javascript-libraries": "^2.12.19",
         "@hint/hint-sri": "^4.0.20",
+        "@hint/hint-ssllabs": "^2.4.24",
         "@playwright/test": "^1.32.3",
         "@types/jasmine": "~4.3.1",
         "@types/prismjs": "^1.26.0",
