@@ -63,6 +63,7 @@
         "@hint/hint-sri": "^4.0.20",
         "@hint/hint-ssllabs": "^2.4.24",
         "@hint/hint-strict-transport-security": "^3.0.20",
+        "@hint/hint-stylesheet-limits": "^3.3.24",
         "@playwright/test": "^1.32.3",
         "@types/jasmine": "~4.3.1",
         "@types/prismjs": "^1.26.0",
