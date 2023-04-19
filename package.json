@@ -65,6 +65,7 @@
         "@hint/hint-strict-transport-security": "^3.0.20",
         "@hint/hint-stylesheet-limits": "^3.3.24",
         "@hint/hint-validate-set-cookie-header": "^3.0.20",
+        "@hint/hint-x-content-type-options": "^4.0.20",
         "@playwright/test": "^1.32.3",
         "@types/jasmine": "~4.3.1",
         "@types/prismjs": "^1.26.0",
