@@ -19,7 +19,7 @@
         "@angular/service-worker": "^15.2.8",
         "hammerjs": "^2.0.8",
         "prismjs": "^1.29.0",
-        "rxjs": "~7.8.0",
+        "rxjs": "~7.8.1",
         "subscribable-things": "^2.1.14",
         "timing-provider": "^6.2.15",
         "tslib": "^2.5.0",
