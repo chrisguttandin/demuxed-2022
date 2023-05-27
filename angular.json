@@ -1,6 +1,5 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-    "defaultProject": "demuxed-2022",
     "newProjectRoot": "projects",
     "projects": {
         "demuxed-2022": {
