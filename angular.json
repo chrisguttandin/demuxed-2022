@@ -95,6 +95,7 @@
                     "builder": "@angular-devkit/build-angular:server",
                     "configurations": {
                         "production": {
+                            "buildOptimizer": true,
                             "fileReplacements": [
                                 {
                                     "replace": "src/environments/environment.ts",
