@@ -29,7 +29,7 @@
     "description": "My talk at Demuxed 2022.",
     "devDependencies": {
         "@angular-devkit/build-angular": "^16.0.3",
-        "@angular-eslint/builder": "^15.2.1",
+        "@angular-eslint/builder": "^16.0.3",
         "@angular/cli": "^16.0.3",
         "@angular/compiler-cli": "^15.2.9",
         "@angular/platform-server": "^15.2.9",
