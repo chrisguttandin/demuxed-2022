@@ -68,7 +68,7 @@
         "@hint/hint-validate-set-cookie-header": "^3.0.21",
         "@hint/hint-x-content-type-options": "^4.0.21",
         "@hint/parser-javascript": "^3.1.24",
-        "@hint/parser-manifest": "^2.3.17",
+        "@hint/parser-manifest": "^2.3.18",
         "@playwright/test": "^1.35.0",
         "@types/jasmine": "~4.3.2",
         "@types/prismjs": "^1.26.0",
