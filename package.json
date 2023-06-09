@@ -64,7 +64,7 @@
         "@hint/hint-sri": "^4.0.21",
         "@hint/hint-ssllabs": "^2.4.25",
         "@hint/hint-strict-transport-security": "^3.0.21",
-        "@hint/hint-stylesheet-limits": "^3.3.24",
+        "@hint/hint-stylesheet-limits": "^3.3.25",
         "@hint/hint-validate-set-cookie-header": "^3.0.20",
         "@hint/hint-x-content-type-options": "^4.0.20",
         "@hint/parser-javascript": "^3.1.23",
