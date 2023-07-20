@@ -33,7 +33,7 @@
         "@angular/cli": "^16.1.4",
         "@angular/compiler-cli": "^16.1.6",
         "@angular/platform-server": "^16.1.6",
-        "@commitlint/cli": "^17.6.6",
+        "@commitlint/cli": "^17.6.7",
         "@commitlint/config-angular": "^17.6.6",
         "@hint/connector-puppeteer": "^2.5.24",
         "@hint/formatter-stylish": "^3.1.35",
