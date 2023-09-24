@@ -23,7 +23,7 @@
         "rxjs": "~7.8.1",
         "subscribable-things": "^2.1.24",
         "timing-provider": "^7.0.5",
-        "tslib": "^2.6.1",
+        "tslib": "^2.6.2",
         "zone.js": "~0.13.1"
     },
     "description": "My talk at Demuxed 2022.",
