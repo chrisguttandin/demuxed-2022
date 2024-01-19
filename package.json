@@ -99,7 +99,7 @@
         "load-grunt-config": "^4.0.1",
         "prettier": "^3.2.4",
         "stylelint": "^15.11.0",
-        "stylelint-config-holy-grail": "^11.0.11",
+        "stylelint-config-holy-grail": "^11.0.14",
         "tsconfig-holy-grail": "^14.0.8",
         "typescript": "~5.1.6"
     },
