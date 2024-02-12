@@ -60,7 +60,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "demuxed-2022:build"
+                        "buildTarget": "demuxed-2022:build"
                     }
                 },
                 "lint": {
@@ -80,10 +80,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "development": {
-                            "browserTarget": "demuxed-2022:build:development"
+                            "buildTarget": "demuxed-2022:build:development"
                         },
                         "production": {
-                            "browserTarget": "demuxed-2022:build:production"
+                            "buildTarget": "demuxed-2022:build:production"
                         }
                     },
                     "defaultConfiguration": "development",
