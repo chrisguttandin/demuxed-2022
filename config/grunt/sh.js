@@ -32,11 +32,9 @@ module.exports = (grunt) => {
             cmd: 'npx ng serve'
         },
         'prerender': {
-            cmd: `npx ng run demuxed-2022:server:production && \
-                npx angular-prerender \
-                    --browser-target demuxed-2022:build \
-                    --preserve-index-html \
-                    --server-target demuxed-2022:server`
+            cmd: `npx angular-prerender \
+                --preserve-index-html \
+                --target demuxed-2022:build`
         },
         'preview': {
             cmd: 'npx ng serve --configuration production'
@@ -50,8 +48,8 @@ module.exports = (grunt) => {
             cmd: 'npx ng test --watch false'
         },
         'verify': {
-            cmd: `npx bundle-buddy build/demuxed-2022/*.js.map && \
-                grep -r build/**/*.map -e '/environments/environment.ts'; test $? -eq 1`
+            cmd: `npx bundle-buddy build/demuxed-2022/browser/*.js.map && \
+                grep -r build/demuxed-2022/browser/*.js.map -e '/environments/environment.ts'; test $? -eq 1`
         }
     };
 };

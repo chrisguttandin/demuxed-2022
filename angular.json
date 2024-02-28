@@ -5,15 +5,13 @@
         "demuxed-2022": {
             "architect": {
                 "build": {
-                    "builder": "@angular-devkit/build-angular:browser",
+                    "builder": "@angular-devkit/build-angular:application",
                     "configurations": {
                         "development": {
-                            "buildOptimizer": false,
                             "extractLicenses": false,
                             "namedChunks": true,
                             "optimization": false,
-                            "sourceMap": true,
-                            "vendorChunk": true
+                            "sourceMap": true
                         },
                         "production": {
                             "budgets": [
@@ -45,14 +43,18 @@
                     "defaultConfiguration": "production",
                     "options": {
                         "assets": ["src/assets"],
+                        "browser": "src/main.ts",
                         "i18nMissingTranslation": "error",
                         "index": "src/index.html",
-                        "main": "src/main.ts",
-                        "ngswConfigPath": "src/ngsw-config.json",
                         "outputPath": "build/demuxed-2022",
                         "polyfills": ["zone.js"],
+                        "prerender": false,
                         "scripts": ["hammerjs/hammer.js"],
-                        "serviceWorker": true,
+                        "server": "src/main.server.ts",
+                        "serviceWorker": "src/ngsw-config.json",
+                        "ssr": {
+                            "entry": "src/server.ts"
+                        },
                         "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.scss"],
                         "tsConfig": "src/tsconfig.json"
                     }
@@ -91,28 +93,6 @@
                         "port": 7722
                     }
                 },
-                "server": {
-                    "builder": "@angular-devkit/build-angular:server",
-                    "configurations": {
-                        "production": {
-                            "buildOptimizer": true,
-                            "fileReplacements": [
-                                {
-                                    "replace": "src/environments/environment.ts",
-                                    "with": "src/environments/environment.prod.ts"
-                                }
-                            ],
-                            "optimization": true,
-                            "outputHashing": "media",
-                            "sourceMap": false
-                        }
-                    },
-                    "options": {
-                        "main": "src/main.server.ts",
-                        "outputPath": "build/demuxed-2022-server",
-                        "tsConfig": "src/tsconfig.server.json"
-                    }
-                },
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
@@ -121,7 +101,6 @@
                         "karmaConfig": "config/karma/config.js",
                         "polyfills": ["zone.js", "zone.js/testing"],
                         "scripts": ["hammerjs/hammer.js"],
-                        "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.scss"],
                         "tsConfig": "test/unit/tsconfig.json"
                     }
                 }

@@ -83,7 +83,7 @@ jobs:
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: ./build/demuxed-2022
+                  path: ./build/demuxed-2022/browser
 
             - id: deployment
               name: Deploy to GitHub Pages

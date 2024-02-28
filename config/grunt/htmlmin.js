@@ -2,8 +2,8 @@ module.exports = {
     default: {
         files: [
             {
-                cwd: 'build/demuxed-2022',
-                dest: 'build/demuxed-2022',
+                cwd: 'build/demuxed-2022/browser',
+                dest: 'build/demuxed-2022/browser',
                 expand: true,
                 src: ['**/*.html']
             }
