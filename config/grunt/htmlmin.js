@@ -5,7 +5,7 @@ module.exports = {
                 cwd: 'build/demuxed-2022/browser',
                 dest: 'build/demuxed-2022/browser',
                 expand: true,
-                src: ['**/*.html']
+                src: ['**/404.html']
             }
         ],
         options: {

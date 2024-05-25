@@ -20,14 +20,14 @@ module.exports = (grunt) => {
     return {
         'csp-production': {
             files: {
-                'build/demuxed-2022/browser/index.html': ['build/demuxed-2022/browser/index.html']
+                './': ['build/demuxed-2022/browser/**/index.html']
             },
             options: {
                 patterns: [
                     {
                         match: /<meta\shttp-equiv="content-security-policy"\s*\/?>/,
-                        replacement: () => {
-                            const html = fs.readFileSync('build/demuxed-2022/browser/index.html', 'utf8'); // eslint-disable-line node/no-sync
+                        replacement: (_1, _2, _3, filename) => {
+                            const html = fs.readFileSync(filename, 'utf8'); // eslint-disable-line node/no-sync
                             const regex = /<script[^>]*?>(?<script>.*?)<\/script>/gm;
                             const scriptHashes = [`'sha256-${computeHashOfString(ENABLE_STYLES_SCRIPT, 'sha256', 'base64')}'`];
 
@@ -99,14 +99,6 @@ module.exports = (grunt) => {
                             grunt.file.expand({ cwd: 'build/demuxed-2022', ext: extension }, `assets/${filename}.*`)[0]
                     },
                     {
-                        match: /\s*"\/demuxed-2022(?:\/scripts)?\/runtime(?:-es(?:2015|5))?.[\da-z]*\.js",/g,
-                        replacement: ''
-                    },
-                    {
-                        match: /\s*"\/demuxed-2022(?:\/scripts)?\/runtime(?:-es(?:2015|5))?.[\da-z]*\.js":\s*"[\da-z]+",/g,
-                        replacement: ''
-                    },
-                    {
                         // Replace the hash value inside of the hashTable for "/(index|start).html" because it was modified before.
                         match: /"\/demuxed-2022\/(?<filename>index|start)\.html":\s*"[\da-z]+"/g,
                         replacement: (_, filename) => {
@@ -115,25 +107,6 @@ module.exports = (grunt) => {
                                 'sha1',
                                 'hex'
                             )}"`;
-                        }
-                    }
-                ]
-            }
-        },
-        'runtime': {
-            files: {
-                './': ['build/demuxed-2022/browser/index.html']
-            },
-            options: {
-                patterns: [
-                    {
-                        match: /<script\ssrc="(?<filename>runtime(?:-es(?:2015|5))?.[\da-z]*\.js)"(?<moduleAttribute>\s(?:nomodule|type="module"))?\scrossorigin="anonymous"\sintegrity="sha384-[\d+/A-Za-z]+=*"><\/script>/g,
-                        replacement: (_, filename, moduleAttribute) => {
-                            if (moduleAttribute === undefined) {
-                                return `<script>${fs.readFileSync(`build/demuxed-2022/browser/${filename}`)}</script>`; // eslint-disable-line node/no-sync
-                            }
-
-                            return `<script${moduleAttribute}>${fs.readFileSync(`build/demuxed-2022/browser/${filename}`)}</script>`; // eslint-disable-line node/no-sync
                         }
                     }
                 ]

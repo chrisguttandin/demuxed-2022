@@ -1,4 +1,8 @@
-import { AppServerModule } from './app/app.server.module';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+import { config } from './app/app.config.server';
 
-// eslint-disable-next-line import/no-default-export, unicorn/prefer-export-from
-export default AppServerModule;
+const bootstrap = () => bootstrapApplication(AppComponent, config);
+
+// eslint-disable-next-line import/no-default-export
+export default bootstrap;
