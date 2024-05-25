@@ -24,7 +24,7 @@
         "subscribable-things": "^2.1.36",
         "timing-provider": "^7.1.16",
         "tslib": "^2.6.2",
-        "zone.js": "^0.14.5"
+        "zone.js": "^0.14.6"
     },
     "description": "My talk at Demuxed 2022.",
     "devDependencies": {
