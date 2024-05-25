@@ -33,7 +33,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
 
     private _routerEventsSubscription: null | Subscription;
 
-    private _timingProvider: InstanceType<typeof TimingProvider>;
+    private _timingProvider: null | InstanceType<typeof TimingProvider>;
 
     constructor(
         private _activatedRoute: ActivatedRoute,
@@ -44,7 +44,12 @@ export class SlidesComponent implements OnDestroy, OnInit {
         this._isPreferingReducedMotion = false;
         this._matchMediaQueryMatchSubscription = null;
         this._routerEventsSubscription = null;
-        this._timingProvider = new TimingProvider('gTpRJM4X8J73sPpohywf');
+
+        try {
+            this._timingProvider = new TimingProvider('gTpRJM4X8J73sPpohywf');
+        } catch {
+            this._timingProvider = null;
+        }
     }
 
     @HostListener('document:keyup', ['$event']) public handleKeyUp(event: KeyboardEvent): void {
@@ -111,7 +116,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
             const queryParams = token === null ? token : { token };
 
             if (token !== null) {
-                this._timingProvider.update({ position: this._index + 1 });
+                this._timingProvider?.update({ position: this._index + 1 });
             }
 
             this._router.navigate([`${this._index + 1}`], { queryParams, relativeTo: this._activatedRoute });
@@ -124,7 +129,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
             const queryParams = token === null ? token : { token };
 
             if (token !== null) {
-                this._timingProvider.update({ position: this._index - 1 });
+                this._timingProvider?.update({ position: this._index - 1 });
             }
 
             this._router.navigate([`${this._index - 1}`], { queryParams, relativeTo: this._activatedRoute });
