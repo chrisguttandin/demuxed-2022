@@ -116,7 +116,7 @@
         "url": "https://github.com/chrisguttandin/demuxed-2022.git"
     },
     "scripts": {
-        "prepare": "husky install",
+        "prepare": "husky",
         "test": "grunt lint && grunt test"
     },
     "version": "1.0.36"
