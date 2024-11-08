@@ -34,6 +34,9 @@ module.exports = (grunt) => {
         'preview': {
             cmd: 'npx ng serve --configuration production'
         },
+        'rimraf-source-maps': {
+            cmd: 'rimraf build/demuxed-2022/browser/**.map'
+        },
         'smoke': {
             cmd: `npx playwright install --with-deps && \
                 IS_SMOKE_TEST=true npx playwright test --config config/playwright/config.ts && \
