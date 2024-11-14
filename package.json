@@ -102,7 +102,7 @@
         "puppeteer": "^23.8.0",
         "rimraf": "^6.0.1",
         "stylelint": "^16.10.0",
-        "stylelint-config-holy-grail": "^12.0.19",
+        "stylelint-config-holy-grail": "^12.0.20",
         "tsconfig-holy-grail": "^15.0.1",
         "typescript": "~5.4.5"
     },
