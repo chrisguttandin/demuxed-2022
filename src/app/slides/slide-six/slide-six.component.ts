@@ -5,7 +5,6 @@ import { DefsComponent } from '../defs/defs.component';
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [DefsComponent],
     selector: 'dmx-slide-six',
-    standalone: true,
     styleUrls: ['./slide-six.component.scss'],
     templateUrl: './slide-six.component.html'
 })
