@@ -60,5 +60,16 @@ for (let slide = 1; slide < 26; slide += 1) {
                 });
             });
         });
+
+        test.describe('without font synthesis', () => {
+            test('should look the same', async ({ page }) => {
+                await page.goto(path);
+                await page.locator('html').evaluate(({ style }) => (style.fontSynthesis = 'none'));
+
+                await expect(page).toHaveScreenshot(name, {
+                    fullPage: true
+                });
+            });
+        });
     });
 }
