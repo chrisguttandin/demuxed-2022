@@ -15,7 +15,6 @@ import 'prismjs/components/prism-typescript'; // eslint-disable-line import/no-i
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: 'dmx-prism',
-    standalone: true,
     styleUrls: ['./prism.component.scss'],
     templateUrl: './prism.component.html'
 })
