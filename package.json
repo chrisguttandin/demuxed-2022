@@ -98,7 +98,7 @@
         "karma-sauce-launcher": "^4.3.6",
         "lint-staged": "^16.2.7",
         "load-grunt-config": "^4.0.1",
-        "prettier": "^3.6.2",
+        "prettier": "^3.7.4",
         "puppeteer": "^24.31.0",
         "rimraf": "^6.1.2",
         "stylelint": "^16.26.0",
