@@ -64,7 +64,7 @@
                     }
                 },
                 "extract-i18n": {
-                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "builder": "@angular/build:extract-i18n",
                     "options": {
                         "buildTarget": "demuxed-2022:build"
                     }
@@ -98,7 +98,7 @@
                     }
                 },
                 "test": {
-                    "builder": "@angular-devkit/build-angular:karma",
+                    "builder": "@angular/build:karma",
                     "options": {
                         "assets": ["src/favicon.ico", "src/assets"],
                         "include": ["../test/unit/**/*.ts"],
@@ -129,23 +129,37 @@
             "inlineTemplate": false,
             "prefix": "dmx",
             "skipTests": true,
-            "style": "scss"
+            "style": "scss",
+            "type": "component"
         },
         "@schematics/angular:directive": {
             "prefix": "dmx",
-            "skipTests": true
+            "skipTests": true,
+            "type": "directive"
+        },
+        "@schematics/angular:guard": {
+            "typeSeparator": "."
+        },
+        "@schematics/angular:interceptor": {
+            "typeSeparator": "."
         },
         "@schematics/angular:interface": {
             "prefix": "I"
         },
         "@schematics/angular:module": {
-            "skipTests": true
+            "skipTests": true,
+            "typeSeparator": "."
         },
         "@schematics/angular:pipe": {
-            "skipTests": true
+            "skipTests": true,
+            "typeSeparator": "."
+        },
+        "@schematics/angular:resolver": {
+            "typeSeparator": "."
         },
         "@schematics/angular:service": {
-            "skipTests": true
+            "skipTests": true,
+            "type": "service"
         }
     },
     "version": 1
