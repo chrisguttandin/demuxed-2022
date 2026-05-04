@@ -30,7 +30,7 @@
     "devDependencies": {
         "@angular-builders/custom-esbuild": "^20.0.0",
         "@angular-eslint/builder": "^19.4.0",
-        "@angular/build": "^20.3.24",
+        "@angular/build": "^21.2.8",
         "@angular/cli": "^21.2.8",
         "@angular/compiler-cli": "^20.3.19",
         "@angular/platform-server": "^20.3.19",
