@@ -1,4 +1,5 @@
 import { BehaviorSubject } from 'rxjs';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { SlidesComponent } from '../../../src/app/slides/slides.component';
 
 describe('SlidesComponent', () => {
@@ -21,7 +22,7 @@ describe('SlidesComponent', () => {
 
         router = {
             events: new BehaviorSubject('a fake router event'),
-            navigate(): void {}, // eslint-disable-line @typescript-eslint/no-empty-function, no-empty-function
+            navigate: vi.fn(),
             routerState: {
                 snapshot: {
                     root: {
@@ -34,8 +35,6 @@ describe('SlidesComponent', () => {
                 }
             }
         };
-
-        spyOn(router, 'navigate').and.callThrough();
 
         slidesComponent = new SlidesComponent(activatedRoute, router, { nativeWindow: null });
     });
