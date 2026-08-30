@@ -105,6 +105,7 @@
     "license": "MIT",
     "main": "src/index.html",
     "name": "demuxed-2022",
+    "packageManager": "npm@12",
     "private": true,
     "repository": {
         "type": "git",
